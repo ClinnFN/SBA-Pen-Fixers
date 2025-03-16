@@ -1,8 +1,13 @@
-const users = {
-    "clinnfn": "Hillside4.",
+// Default user credentials
+let users = {
+    "clinnfn": "Hillside4",
     "logan": "loganissmart"
-    "peyton_brennan": "summerdays123"
 };
+
+// Load stored credentials if changed
+if (localStorage.getItem("username") && localStorage.getItem("password")) {
+    users[localStorage.getItem("username")] = localStorage.getItem("password");
+}
 
 function login() {
     let username = document.getElementById("username").value;
