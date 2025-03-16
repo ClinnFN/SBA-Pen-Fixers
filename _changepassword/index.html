@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Password</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="change-container">
+        <h2>Change Password</h2>
+        <input type="password" id="newPassword" placeholder="Enter new password">
+        <button onclick="changePassword()">Change</button>
+        <p id="status-message"></p>
+        <button onclick="location.href='../_account/index.html'">Back</button>
+    </div>
+
+    <script>
+        function changePassword() {
+            let newPassword = document.getElementById("newPassword").value;
+            if (newPassword.trim() !== "") {
+                localStorage.setItem("password", newPassword);
+                document.getElementById("status-message").innerText = "Password changed successfully!";
+            }
+        }
+    </script>
+</body>
+</html>

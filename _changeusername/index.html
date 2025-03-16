@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Username</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="change-container">
+        <h2>Change Username</h2>
+        <input type="text" id="newUsername" placeholder="Enter new username">
+        <button onclick="changeUsername()">Change</button>
+        <p id="status-message"></p>
+        <button onclick="location.href='../_account/index.html'">Back</button>
+    </div>
+
+    <script>
+        function changeUsername() {
+            let newUsername = document.getElementById("newUsername").value;
+            if (newUsername.trim() !== "") {
+                localStorage.setItem("username", newUsername);
+                document.getElementById("status-message").innerText = "Username changed successfully!";
+            }
+        }
+    </script>
+</body>
+</html>
