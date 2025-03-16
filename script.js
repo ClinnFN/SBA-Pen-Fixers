@@ -1,6 +1,7 @@
 const users = {
     "clinnfn": "Hillside4.",
     "logan": "loganissmart"
+    "peyton_brennan": "summerdays123"
 };
 
 function login() {
